@@ -1,0 +1,20 @@
+<!--index.wxml-->
+<view class="container">
+  <view  bindtap="bindViewTap" class="userinfo">
+    <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+    <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+  </view>
+  <view class="usermotto">
+    <text class="user-motto">{{motto}}</text>
+  </view>
+  <button bindtap="bindCreateTap">发起活动</button>
+  <view class="activity-list">
+    <block wx:for="{{activities}}" wx:for-item="activity" wx:key="objectId">
+      <view class="flex-wrap todo">
+        <text>
+          {{activity.content}}
+        </text>
+      </view>
+    </block>
+  </view>
+</view>

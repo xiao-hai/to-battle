@@ -1,0 +1,10 @@
+<!--pages/signup/signup.wxml-->
+<view class="">
+<text>活动名称</text>
+  <input
+    placeholder="活动名称"
+    bindinput="updateName"
+    value="{{form.name}}"
+  />
+  <button bindtap="add">确定</button>
+</view>

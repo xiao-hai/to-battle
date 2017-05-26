@@ -1,0 +1,55 @@
+<!--pages/addActivity/addActivity.wxml-->
+<view class="container">
+  <view class="zan-form">
+    <view class="zan-cell zan-form__item">
+      <text class="zan-form__title">活动名称</text>
+      <input
+        class="zan-form__input zan-cell__bd"
+        placeholder="活动名称"
+      />
+    </view>
+     <view class="zan-cell zan-form__item">
+      <text class="zan-form__title">活动地址</text>
+      <input
+        class="zan-form__input zan-cell__bd"
+        placeholder="活动地址"
+      />
+    </view>
+    <view class="zan-cell zan-form__item">
+      <text class="zan-form__title">活动开始时间</text>
+      <picker mode="date" value="{{startDate}}" start="2015-09-01" end="2017-09-01" bindchange="bindDateChange">
+      <view class="picker">
+        当前选择: {{startDate}}
+      </view>
+    </picker>
+      <picker mode="time" value="{{time}}" start="09:01" end="21:01" bindchange="bindTimeChange">
+      <view class="picker">
+        当前选择: {{time}}
+      </view>
+    </picker>
+    </view>
+    <view class="zan-cell zan-form__item">
+      <text class="zan-form__title">联系电话</text>
+      <input
+        class="zan-form__input zan-cell__bd"
+        type="number"
+        maxlength="20"
+        placeholder="手机或固定电话"
+      />
+    </view>
+    <view class="zan-cell zan-form__item zan-cell--last-child">
+      <text class="zan-form__title">选择区域</text>
+      <view class="zan-form__input zan-cell__bd">
+        <picker
+          mode="selector"
+          range="{{ area }}"
+          value="{{ areaIndex }}"
+          bindchange="onAreaChange"
+        >
+          {{ area[areaIndex] }}
+        </picker>
+      </view>
+    </view>
+  </view>
+
+</view>
